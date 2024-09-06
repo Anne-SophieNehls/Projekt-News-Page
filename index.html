@@ -1,55 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/img/worldwide_1683379.png" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/img/worldwide_1683379.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Page</title>
     <script type="module" src="/src/main.ts" defer></script>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <main>
       <section id="hero">
         <div>
           <h4>The brandnew</h4>
-          <h1> News-Page!</h1>
+          <h1>News-Page!</h1>
         </div>
-        <img src="./src/img/worldwide_1683379.png" alt="logo" id="logo">
+        <img src="./src/img/worldwide_1683379.png" alt="logo" id="logo" />
       </section>
-      <form action="" id="form" >
+      <form action="" id="form">
         <div>
-        <label for="search">Suchbegriff:</label>
-        <input type="text" id="search">
-      </div>
-      <div>
-        <label for="language">Sprache:</label>
-        <select name="language" id="language">
-          <option value="ar">Arabisch</option>
-          <option value="de">Deutsch</option>
-          <option value="en">Englisch</option>
-          <option value="fr">Französisch</option>
-          <option value="sv">schwedisch</option>
-          <option value="es">Spanisch</option>
-          <option value="nl">Niederlänisch</option>
-          <option value="it">Italienisch</option>
-        </select>
-      </div>
-      <div>
-        <label for="sort"> Sortieren nach:</label>
-        <select name="sort" id="sort">
-          <option value="relevanz">Relevanz</option>
-          <option value="populare">Popularität</option>
-          <option value="newest">Neuste zuerst</option>
-        </select>
-      </div>
-      <button id="btn-search">Suchen</button>
+          <label for="search">Suchbegriff:</label>
+          <input type="text" id="search" />
+        </div>
+        <div>
+          <label for="language">Sprache:</label>
+          <select name="language" id="language">
+            <option value="ar">Arabisch</option>
+            <option value="de">Deutsch</option>
+            <option value="en">Englisch</option>
+            <option value="fr">Französisch</option>
+            <option value="sv">schwedisch</option>
+            <option value="es">Spanisch</option>
+            <option value="nl">Niederlänisch</option>
+            <option value="it">Italienisch</option>
+          </select>
+        </div>
+        <div>
+          <label for="sort"> Sortieren nach:</label>
+          <select name="sort" id="sort">
+            <option value="relevancy">Relevanz</option>
+            <option value="popularity">Popularität</option>
+            <option value="publishedAt">Neuste zuerst</option>
+          </select>
+        </div>
+        <button id="btn-search">Suchen</button>
       </form>
 
       <div id="news-content"></div>
     </main>
-    <footer>
-
-    </footer>
+    <footer></footer>
   </body>
 </html>
