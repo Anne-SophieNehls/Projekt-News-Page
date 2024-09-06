@@ -13,14 +13,18 @@ const submitBtn = document.getElementById("btn-search") as HTMLButtonElement;
 
 const newsContent = document.getElementById("news-content") as HTMLDivElement;
 
-const createNewsCard = () => {
+const createNewsCard = (article: IArticle) => {
   const newsCard = document.createElement("div") as HTMLDivElement;
   newsCard.className = "news-card";
   const headlineElement = document.createElement("h2") as HTMLHeadingElement;
   headlineElement.className = "title";
+  headlineElement.textContent = article.title;
   const infoElement = document.createElement("p") as HTMLParagraphElement;
   infoElement.className = "info";
-  const imageElement = document.createElement("img") as HTMLParagraphElement;
+  infoElement.textContent = article.description;
+  const imageElement = document.createElement("img") as HTMLImageElement;
+  imageElement.src = article.urlToImage;
+  imageElement.alt = article.urlToImage;
   const toArticleElement = document.createElement(
     "button"
   ) as HTMLButtonElement;
@@ -33,6 +37,7 @@ const createNewsCard = () => {
 
   newsContent.appendChild(newsCard);
 };
+
 formElement.addEventListener("submit", (event: SubmitEvent) => {
   event.preventDefault();
   let newsURL = `${BASE_URL}/v2/everything`;
@@ -54,4 +59,12 @@ formElement.addEventListener("submit", (event: SubmitEvent) => {
   }
 
   newsURL += `?${queryParams.join("&")}`;
+
+  fetch(newsURL)
+    .then((response: Response) => response.json())
+    .then((data: any) => {
+      data.articles.forEach((article: IArticle) => {
+        createNewsCard(article);
+      });
+    });
 });
