@@ -11,20 +11,13 @@ const languageElement = document.getElementById(
 const sortElement = document.getElementById("sort") as HTMLSelectElement;
 const submitBtn = document.getElementById("btn-search") as HTMLButtonElement;
 
-formElement.appendChild(searchElement);
-formElement.appendChild(languageElement);
-formElement.appendChild(sortElement);
-formElement.appendChild(submitBtn);
-
-const newsContent = document.getElementsByClassName(
-  "news-content"
-)[0] as HTMLDivElement;
+const newsContent = document.getElementById("news-content") as HTMLDivElement;
 
 const createNewsCard = () => {
   const newsCard = document.createElement("div") as HTMLDivElement;
   newsCard.className = "news-card";
-  const headlineContent = document.createElement("h2") as HTMLHeadingElement;
-  headlineContent.className = "title";
+  const headlineElement = document.createElement("h2") as HTMLHeadingElement;
+  headlineElement.className = "title";
   const infoElement = document.createElement("p") as HTMLParagraphElement;
   infoElement.className = "info";
   const imageElement = document.createElement("img") as HTMLParagraphElement;
@@ -32,6 +25,13 @@ const createNewsCard = () => {
     "button"
   ) as HTMLButtonElement;
   toArticleElement.className = "to-article";
+
+  newsCard.appendChild(headlineElement);
+  newsCard.appendChild(infoElement);
+  newsCard.appendChild(imageElement);
+  newsCard.appendChild(toArticleElement);
+
+  newsContent.appendChild(newsCard);
 };
 formElement.addEventListener("submit", (event: SubmitEvent) => {
   event.preventDefault();
