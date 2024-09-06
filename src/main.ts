@@ -1,4 +1,4 @@
-import { INews, IArticle } from "./interfaces/INews";
+import { IArticle } from "./interfaces/INews";
 
 const apiKey = "517e77f5cd1c4fc39b5eff509379de62";
 const BASE_URL = "https://newsapi.org";
@@ -9,7 +9,7 @@ const languageElement = document.getElementById(
   "language"
 ) as HTMLSelectElement;
 const sortElement = document.getElementById("sort") as HTMLSelectElement;
-const submitBtn = document.getElementById("btn-search") as HTMLButtonElement;
+//const submitBtn = document.getElementById("btn-search") as HTMLButtonElement;
 
 const newsContent = document.getElementById("news-content") as HTMLDivElement;
 
@@ -25,6 +25,7 @@ const createNewsCard = (article: IArticle) => {
   const imageElement = document.createElement("img") as HTMLImageElement;
   imageElement.src = article.urlToImage;
   imageElement.alt = article.urlToImage;
+  imageElement.style.display = article.urlToImage ? "block" : "none";
   const toArticleElement = document.createElement(
     "button"
   ) as HTMLButtonElement;
