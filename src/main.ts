@@ -67,5 +67,8 @@ formElement.addEventListener("submit", (event: SubmitEvent) => {
       data.articles.forEach((article: IArticle) => {
         createNewsCard(article);
       });
+    })
+    .catch((error: Error) => {
+      console.error(error.message);
     });
 });
