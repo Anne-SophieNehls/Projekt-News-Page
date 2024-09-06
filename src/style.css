@@ -20,6 +20,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+
 /*= hero */
 
 #hero{
@@ -32,10 +33,10 @@ h1 {
   line-height: 0.8;
   margin-bottom: 35px ;
 }
+
 h4{
   font-size: 1.6rem;
   line-height: 1.1;
-
 }
 
 #logo {
@@ -43,7 +44,6 @@ h4{
   width: 7em;
   padding: 1.5em;
   object-fit: contain;
- 
 }
 
 /*= form */
@@ -52,6 +52,7 @@ form{
   padding: 20px;
   border-radius: 15px;
   border: 1px solid #472b0f;
+  margin: 10%;
 }
 
 form>div{
@@ -68,7 +69,7 @@ label{
 input{
   border-radius: 3px;
   border: none;
-  width: 350px;
+  width: 300px;
 }
 
 select{
@@ -79,15 +80,25 @@ select{
 }
 
 #btn-search{
-margin: 10px 40%;}
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+ margin: 10px 10%; 
+ background-color: #e1ceb5;
+ font-size: 1em;
+ transition: border-color 0.25s;
+}
 
-button {
+#btn-search:hover {
+  border-color: #472b0f;
+}
+
+button{
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.9em;
   font-size: 1em;
   font-weight: 500;
-  font-family: inherit;
   background-color: #e1ceb5;
   cursor: pointer;
   transition: border-color 0.25s;
@@ -99,37 +110,41 @@ button:hover {
 /*= output */
 
 #news-content{
+  margin: 20px 5%;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 35px;
 }
 
 .news-card{
   max-width: 30%;
   min-width: 250px;
-  height: 60svh;
+  min-height: 55svh;
 
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
 
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
   border: 1px solid #472b0f;
 }
 
 .titel{
+  font-size: 1.3rem;
   line-height: 1.0;
-}
-
-.info{
-  font-size: 1.2rem;
   font-weight: 700;
 }
 
+.info{
+  font-size: 1rem;
+  font-weight: 300;
+}
+
 img{
-  height: 35%;
-  width: 60%;
+  height: 45%;
+  width: 85%;
   object-fit: cover;
 }
 
