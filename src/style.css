@@ -1,11 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html{
-   scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -23,18 +23,19 @@ body {
 
 /*= hero */
 
-#hero{
+#hero {
   display: flex;
   padding-left: 40px;
+  justify-content: center;
 }
 
 h1 {
   font-size: 4.2em;
   line-height: 0.8;
-  margin-bottom: 35px ;
+  margin-bottom: 35px;
 }
 
-h4{
+h4 {
   font-size: 1.6rem;
   line-height: 1.1;
 }
@@ -48,52 +49,56 @@ h4{
 
 /*= form */
 
-form{
+form {
   padding: 20px;
   border-radius: 15px;
   border: 1px solid #472b0f;
-  margin: 10%;
+  margin: 10px auto;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
 }
 
-form>div{
+form > div {
   display: flex;
   justify-content: space-between;
   height: 40px;
   margin: 10px;
 }
 
-label{
+label {
   margin: 10px;
 }
 
-input{
+input {
   border-radius: 3px;
   border: none;
   width: 300px;
+  padding: 10px;
 }
 
-select{
+select {
   width: 200px;
   text-align: center;
   border-radius: 3px;
   border: none;
 }
 
-#btn-search{
+#btn-search {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
- margin: 10px 10%; 
- background-color: #e1ceb5;
- font-size: 1em;
- transition: border-color 0.25s;
+  margin: 10px auto;
+  background-color: #e1ceb5;
+  font-size: 1em;
+  transition: border-color 0.25s;
 }
 
 #btn-search:hover {
   border-color: #472b0f;
 }
 
-button{
+button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.9em;
@@ -109,14 +114,14 @@ button:hover {
 
 /*= output */
 
-#news-content{
+#news-content {
   margin: 20px 5%;
   display: flex;
   flex-wrap: wrap;
   gap: 35px;
 }
 
-.news-card{
+.news-card {
   max-width: 30%;
   min-width: 250px;
   min-height: 55svh;
@@ -131,24 +136,24 @@ button:hover {
   border: 1px solid #472b0f;
 }
 
-.titel{
+.titel {
   font-size: 1.3rem;
-  line-height: 1.0;
+  line-height: 1;
   font-weight: 700;
 }
 
-.info{
+.info {
   font-size: 1rem;
   font-weight: 300;
 }
 
-img{
+img {
   height: 45%;
   width: 85%;
   object-fit: cover;
 }
 
-.to-article{
+.to-article {
   background-color: #472b0f;
   color: #e1ceb5;
 }
