@@ -63,6 +63,8 @@ formElement.addEventListener("submit", (event: SubmitEvent) => {
   queryParams.push(`apiKey=${apiKey}`);
   newsURL += `?${queryParams.join("&")}`;
 
+  newsContent.innerHTML = "";
+
   fetch(newsURL)
     .then((response: Response) => response.json())
     .then((data: any) => {
