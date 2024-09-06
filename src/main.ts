@@ -36,8 +36,12 @@ const createNewsCard = (article: IArticle) => {
   newsCard.appendChild(infoElement);
   newsCard.appendChild(imageElement);
   newsCard.appendChild(toArticleElement);
-
   newsContent.appendChild(newsCard);
+
+
+toArticleElement.addEventListener("click",() => {
+  window.open(article.url, '_blank' )
+})
 };
 
 formElement.addEventListener("submit", (event: SubmitEvent) => {
@@ -75,4 +79,6 @@ formElement.addEventListener("submit", (event: SubmitEvent) => {
     .catch((error: Error) => {
       console.error(error.message);
     });
+
+
 });
