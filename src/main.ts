@@ -58,6 +58,7 @@ formElement.addEventListener("submit", (event: SubmitEvent) => {
     queryParams.push(`sortBy=${sortKey}`);
   }
 
+  queryParams.push(`apiKey=${apiKey}`);
   newsURL += `?${queryParams.join("&")}`;
 
   fetch(newsURL)
