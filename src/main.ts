@@ -29,6 +29,7 @@ const createNewsCard = (article: IArticle) => {
     "button"
   ) as HTMLButtonElement;
   toArticleElement.className = "to-article";
+  toArticleElement.textContent = "To article";
 
   newsCard.appendChild(headlineElement);
   newsCard.appendChild(infoElement);
