@@ -4,10 +4,50 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
+    <title>News Page</title>
+    <script type="module" src="/src/main.ts" defer></script>
+    <link rel="stylesheet" href="src/style.css">
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <main>
+      <header>
+
+      </header>
+      <h4>The brandnew</h4>
+      <h1> News-Page!</h1>
+      <form action="">
+        <div>
+        <label for="search">Suchbegriff:</label>
+        <input type="text" id="search">
+      </div>
+      <div>
+        <label for="language">Sprache:</label>
+        <select name="language" id="language">
+          <option value="arabisch">Arabisch</option>
+          <option value="deutsch">Deutsch</option>
+          <option value="englisch">Englisch</option>
+          <option value="franzoesisch">Französisch</option>
+          <option value="schwedisch">schwedisch</option>
+          <option value="spanisch">Spanisch</option>
+          <option value="niederlaenisch">Niederlänisch</option>
+          <option value="italienisch">Italienisch</option>
+        </select>
+      </div>
+      <div>
+        <label for="sort"> Sortieren nach:</label>
+        <select name="sort" id="sort">
+          <option value="relevanz">Relevanz</option>
+          <option value="populare">Popularität</option>
+          <option value="newest">Neuste zuerst</option>
+        </select>
+      </div>
+      <button id="btn-search">Suchen</button>
+      </form>
+
+      <div id="news-content"></div>
+    </main>
+    <footer>
+
+    </footer>
   </body>
 </html>
